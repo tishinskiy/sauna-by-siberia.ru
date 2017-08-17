@@ -1,0 +1,60 @@
+.header-block
+	.container
+		header.header
+			.clearfix
+
+				.top-menu.top-menu__left.menu
+					nav
+						.menu--list
+							-
+								var links = [
+									{'name':'Главная', 'anchor':'info-block'},
+									{'name':'Для чего', 'anchor':'advantage-block'},
+									{'name':'Где поставить', 'anchor':'slider-block'},
+									{'name':'Видео', 'anchor':'video-block'},
+								]
+							each val in links
+								.menu--item.menu-item
+									a(href="#"+val.anchor)
+										span= val.name
+				.logo
+					a(href="/")
+						include ../svg/logo.svg
+
+				.top-menu.menu.top-menu__right
+					nav
+						.menu--list
+							-
+								var links = [
+									{'name':'Фотогалерея', 'anchor':'photogalery-block'},
+									{'name':'Вопросы и ответы', 'anchor':'reviews-block'},
+									{'name':'Где купить', 'anchor':'map-block'}
+								]
+							each val in links
+								.menu--item.menu-item
+									a(href="#"+val.anchor)
+										span= val.name
+				.top-menu--header#top-menu-toggle-button
+					span МЕНЮ
+					.menu-toggle-button
+						span
+						span
+						span
+
+				.top-menu.top-menu__mobile.menu
+					nav
+						.menu--list
+							-
+								var links = [
+									{'name':'Главная', 'anchor':'info-block'},
+									{'name':'Для чего', 'anchor':'advantage-block'},
+									{'name':'Где поставить', 'anchor':'slider-block'},
+									{'name':'Видео', 'anchor':'video-block'},
+									{'name':'Фотогалерея', 'anchor':'photogalery-block'},
+									{'name':'Вопросы и ответы', 'anchor':'reviews-block'},
+									{'name':'Где купить', 'anchor':'map-block'}
+								]
+							each val in links
+								.menu--item.menu-item
+									a(href="#"+val.anchor)
+										span= val.name

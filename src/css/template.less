@@ -1,0 +1,190 @@
+@import './includes/bootstrap-grid.less';
+@import './fonts/fonts.less';
+@import './includes/main.less';
+
+@import './blocks/header-block.less';
+@import './blocks/footer-block.less';
+@import './blocks/info-block.less';
+@import './blocks/advantage-block.less';
+@import './blocks/slider-block.less';
+@import './blocks/video-block.less';
+@import './blocks/photogalery-block.less';
+@import './blocks/reviews-block.less';
+@import './blocks/map-block.less';
+
+@import './includes/button.less';
+
+html {
+	height: 100%;
+}
+
+body {
+	background: #fff;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	font-family: 'Proxima Nova Rg', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+
+	transition: padding-top 0.2s linear;
+
+	@media (max-width: 991px) {
+		padding-top: 68px !important;
+	}
+
+}
+
+.page-wrap {
+	flex-grow: 1;
+}
+
+body a {
+	color: #105b00;
+	text-decoration: underline;
+	cursor: pointer;
+	// font-size: 15px;
+
+	&:hover,
+	&:focus{
+		text-decoration: none;
+	}
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 45px;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+
+.site-block {
+	padding-top: 30px;
+	padding-bottom: 50px;
+
+	@media (min-width: 768px) {
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+	@media (min-width: 992px) {
+		padding-top: 55px;
+		padding-bottom: 80px;
+	}
+	@media (min-width: 1200px) {
+		padding-top: 70px;
+		padding-bottom: 100px;
+	}
+
+	&--header {
+		text-align: center;
+
+		h1, h2 {
+			color: #444444;
+			font-weight: normal;
+			font-size: 28px;
+			line-height: 33px;
+
+			@media (min-width: 768px) {
+				font-size: 33px;
+				line-height: 45px;
+			}
+			@media (min-width: 992px) {
+				font-size: 40px;
+				line-height: 50px;
+			}
+			@media (min-width: 1200px) {
+				font-size: 48px;
+				line-height: 55px;
+			}
+		}
+	}
+}
+
+.slider-controll {
+	margin-top: 25px;
+	text-align: center;
+	@media (min-width: 768px) {
+		margin-top: 35px;
+	}
+	@media (min-width: 992px) {
+		margin-top: 50px;
+	}
+	@media (min-width: 1200px) {
+		margin-top: 65px;
+	}
+
+	&--dots {
+		display: inline-block;
+		vertical-align: middle;
+		.slick-dots {
+			margin: 0 20px;
+			padding: 0;
+
+			@media (min-width: 992px) {
+				margin: 0 50px;
+			}
+			li {
+				display: inline-block;
+				margin-right: 9px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				button {
+					padding: 0;
+					margin: 0;
+					font-size: 0;
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					background: #444444;
+					border: 0;
+					cursor: pointer;
+				}
+
+				&.slick-active {
+					button {
+						background: #016100;
+					}
+				}
+			}
+		}
+	}
+
+	&--prew,
+	&--next {
+		display: inline-block;
+		vertical-align: middle;
+		width: 37px;
+		height: 37px;
+		border-radius: 50%;
+		background: url("../images/arrow.png") right top no-repeat;
+
+		&:hover {
+			background-position: left top;
+		}
+	}
+
+	&--prew {
+
+	}
+	&--next {
+		transform: scaleX(-1)
+	}
+}

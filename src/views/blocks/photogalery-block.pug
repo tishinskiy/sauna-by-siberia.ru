@@ -1,0 +1,31 @@
+.photogalery-block.site-block
+	.container
+		.site-block--header
+			h2
+				strong Фотогалерея
+		.photogalery--header
+			p
+				strong Мини-сауна удачно вписывается в любой интерьер
+			small Для подключения требуется только розетка
+		.photogalery
+			.photogalery--wrap
+				.photogalery--list
+					-
+						var items = [
+							'photo-1.jpg',
+							'photo-2.jpg',
+							'photo-3.jpg',
+							'photo-1.jpg',
+							'photo-2.jpg',
+							'photo-3.jpg',
+						]
+
+					each val in items
+						.photogalery--item
+							img(
+								src="./images/"+val
+							)
+		.slider-controll#main-slider-controll
+			a(href='javasript:;').slider-controll--prew#photogalery--prew
+			.slider-controll--dots#photogalery--dots
+			a(href='javasript:;').slider-controll--next#photogalery--next

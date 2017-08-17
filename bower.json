@@ -1,0 +1,26 @@
+{
+  "name": "gulp_and_bower",
+  "description": "gulp and bower",
+  "main": "index.js",
+  "authors": [
+    "Tishinskiy Alexandr"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^7.0.0",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.7.1",
+    "font-awesome": "^4.7.0",
+    "components-font-awesome": "^4.7.0",
+    "jquery.form-styler": "^2.0.0"
+  }
+}

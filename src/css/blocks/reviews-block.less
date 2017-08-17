@@ -1,0 +1,110 @@
+.reviews-block {
+	background: url("../images/bg-1.jpg") center top #F0D4A9;
+
+	&--images-1,
+	&--images-2 {
+		display: none;
+	}
+
+	@media (min-width: 1800px) {
+		position: relative;
+
+		&--images-1,
+		&--images-2 {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			height: 100%;
+
+			img {
+				height: 100%;
+			}
+		}
+
+		&--images-1 {
+			left: 0;
+		}
+		&--images-2 {
+			right: 0;
+		}
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.reviews-slider {
+
+	&--wrap {
+
+	}
+
+	&--item {
+
+	}
+}
+.review {
+
+	margin-top: 10px;
+
+	@media (min-width: 768px) {
+		margin-top: 15px;
+	}
+	@media (min-width: 992px) {
+		margin-top: 20px;
+	}
+	@media (min-width: 1200px) {
+		margin-top: 30px;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&--list {
+		text-align: center;
+	}
+
+	&--question {
+		color: #016100;
+		font-size: 18px;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 22px;
+		}
+		@media (min-width: 992px) {
+			font-size: 28px;
+		}
+		@media (min-width: 1200px) {
+			font-size: 36px;
+		}
+	}
+	&--ansver {
+		font-size: 16px;
+		color: #444444;
+		font-weight: bold;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 19px;
+		}
+		@media (min-width: 992px) {
+			font-size: 23px;
+		}
+		@media (min-width: 1200px) {
+			font-size: 28px;
+		}
+	}
+}

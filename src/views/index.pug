@@ -1,0 +1,28 @@
+extends ./template/_base.pug
+block script
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")
+	script(src="./js/ymap.js", type="text/javascript")
+
+append content
+	a(name="info-block")
+	block info-block
+		include blocks/info-block.pug
+	a(name="advantage-block")
+	block advantage-block
+		include blocks/advantage-block.pug
+	a(name="slider-block")
+	block slider-block
+		include blocks/slider-block.pug
+	a(name="video-block")
+	block video-block
+		include blocks/video-block.pug
+	a(name="photogalery-block")
+	block photogalery-block
+		include blocks/photogalery-block.pug
+	a(name="reviews-block")
+	block reviews-block
+		include blocks/reviews-block.pug
+	a(name="map-block")
+	block map-block
+		include blocks/map-block.pug
+

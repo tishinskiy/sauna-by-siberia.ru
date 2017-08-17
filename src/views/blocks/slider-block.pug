@@ -1,0 +1,30 @@
+.slider-block.site-block
+	.container
+		.site-block--header
+			h2
+				strong Мини-сауна
+				|
+				|подойдет как для дома,
+				br
+				| так и для бизнеса
+		.main-slider
+			-
+				var values = [
+					'Соберите свою мини-сауну за 10 минут на 1м2',
+					'Соберите свою мини-сауну за 20 минут на 2м2',
+					'Соберите свою мини-сауну за 30 минут на 3м2',
+					'Соберите свою мини-сауну за 40 минут на 4м2',
+				]
+			.main-slider--header
+				each val in values
+					.slider-header--item
+						p= val
+			.main-slider--wrap
+				.main-slider--list
+					each val in values
+						.main-slider--item
+							img(src="http://placehold.it/1140x480")
+			.slider-controll#main-slider-controll
+				a(href='javasript:;').slider-controll--prew#main-slider--prew
+				.slider-controll--dots#main-slider--dots
+				a(href='javasript:;').slider-controll--next#main-slider--next

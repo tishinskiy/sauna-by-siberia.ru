@@ -1,0 +1,60 @@
+.map-block
+	.map-block--filter
+		.container
+			.map-filter--wrap
+				.map-filter
+					.map-filter--row
+						.map-filter--header
+							h3 Где купить?
+						.map-filter-block
+							select(
+								data-placeholder="Выберите регион"
+							)
+								option
+								option(value="1") lorem_1_1
+								option(value="2") lorem_1_2
+								option(value="3") lorem_1_3
+								option(value="4") lorem_1_4
+
+						.map-filter-block
+							select(
+								data-placeholder="Выберите Город"
+							)
+								option
+								option(value="1") lorem_2_1
+								option(value="2") lorem_2_2
+								option(value="3") lorem_2_3
+								option(value="4") lorem_2_4
+
+						.map-filter-block
+							select(
+								data-placeholder="Выберите точку продажи"
+							)
+								option
+								option(value="1") lorem_3_1
+								option(value="2") lorem_3_2
+								option(value="3") lorem_3_3
+								option(value="4") lorem_3_4
+
+						.map-filter--result
+							.filter-result--list
+								-
+									var result = [
+										{'name': 'Интернет-магазин «ЧАЙКОФЪ»', 'address': 'г. Барнаул, ул.Гущина, 154в', 'point': ''},
+										{'name': 'Торговая Сеть «БЫСТРОНОМ» ', 'address': 'г. Барнаул, ул.Гущина, 154в', 'point': ''},
+										{'name': '«БАЛТИЙСКИЙ БАЗАР» ИП Гвоздева Т.Ю.', 'address': 'г. Барнаул, ул. Балтийская, 8', 'point': ''},
+										{'name': 'Торговая Сеть «ВИНОТЕКА»', 'address': 'г. Барнаул, ул. Малахова, 177е к2, 1 этаж', 'point': ''},
+										{'name': 'г. Барнаул, ул. Малахова, 177е к2, 1 этаж', 'address': 'г. Барнаул, пр.Ленина, 80', 'point': ''},
+										{'name': 'Торговая Сеть «ЧАЙКОФЪ»', 'address': 'г. Барнаул, ул.Юрина, 202', 'point': ''},
+										{'name': 'Торговая Сеть «ВИНОТЕКА»', 'address': 'г. Бийск, ул. Казанцевых, 58', 'point': ''},
+										{'name': '«БАЛТИЙСКИЙ БАЗАР» ИП Гвоздева Т.Ю', 'address': 'г. Барнаул, ул. Балтийская, 8', 'point': ''},
+										{'name': '«БАЛТИЙСКИЙ БАЗАР» ИП Гвоздева Т.Ю', 'address': 'г. Барнаул, ул. Балтийская, 8', 'point': ''},
+										{'name': '«БАЛТИЙСКИЙ БАЗАР» ИП Гвоздева Т.Ю', 'address': 'г. Барнаул, ул. Балтийская, 8', 'point': ''},
+									]
+
+								each val in result
+									.filter-result--item
+										a(href="javascript:;")= val.name
+										p= val.address
+	.contaiter
+	#ymap.ymap

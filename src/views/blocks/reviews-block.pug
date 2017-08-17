@@ -1,0 +1,35 @@
+.reviews-block.site-block
+	.reviews-block--images-1
+		img(src="./images/bg-3-left.png")
+	.reviews-block--images-2
+		img(src="./images/bg-3-right.png")
+	.container
+		.site-block--header
+			h2
+				strong ТОП 9 вопросов от наших клиентов
+		.reviews-slider--wrap
+			-var n = 0;
+			.reviews-slider
+				while n < 3
+					-n++;
+					.reviews-slider--item
+						.review--list
+							.review
+								.review--question
+									p 1. Из чего изготавливается <strong> мини-сауна </strong>?
+								.review--ansver
+									p Мини-сауна изготовлена из целебного Алтайского кедра
+							.review
+								.review--question
+									p 2. Как долго собирается <strong> мини-сауна</strong>?
+								.review--ansver
+									p Сборка занимает не более 10 минут по инструкции
+							.review
+								.review--question
+									p 3. Нужны ли инструменты для сборки?
+								.review--ansver
+									p Нет не нужны. У мини-сауны полностью разборная конструкция, не требующая инструментов
+		.slider-controll#main-slider-controll
+			a(href='javasript:;').slider-controll--prew#reviews--prew
+			.slider-controll--dots#reviews--dots
+			a(href='javasript:;').slider-controll--next#reviews--next

@@ -1,0 +1,39 @@
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.container:after,
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.text-center-left, .text-center-right {
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+
+	.text-center-left {text-align: left;}
+	.text-center-right {text-align: right;}
+}
+
+.inline-block {display: inline-block;}
